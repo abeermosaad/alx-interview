@@ -6,7 +6,7 @@ def validUTF8(data):
     """Determines if a given data set represents a valid UTF-8 encoding"""
     binary_list = []
     for char in data:
-        if char > 240 or data == []:
+        if char > 248:
             return False
         binary_list.append(format(char, '#010b')[-8:])
     # print(binary_list)
